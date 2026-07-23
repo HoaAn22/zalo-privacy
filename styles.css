@@ -1,0 +1,79 @@
+/* 1. ĐỊNH NGHĨA LÀM MỜ CHO TỪNG NHÓM DỰA TRÊN CLASS CỦA BODY */
+
+/* Nhóm Avatar */
+body.blur-avatar .zavatar {
+    filter: blur(10px) !important;
+    transition: filter 0.1s ease-in-out !important;
+}
+
+/* Nhóm Tên người dùng */
+body.blur-name .header-title,
+body.blur-name .header-info__name .truncate,
+body.blur-name .conv-item-title__name .truncate {
+    filter: blur(10px) !important;
+    transition: filter 0.2s ease-in-out !important;
+}
+
+/* Nhóm Tin nhắn */
+body.blur-message .inline,
+body.blur-message .message-content-render,
+body.blur-message .z-conv-message__preview-sender-name {
+    filter: blur(10px) !important;
+    transition: filter 0.2s ease-in-out !important;
+}
+
+/* 2. XỬ LÝ MỞ MỜ KHI HOVER (Áp dụng chung) */
+
+body.blur-avatar .msg-item:hover .zavatar,
+body.blur-name .msg-item:hover .conv-item-title__name .truncate,
+body.blur-message .msg-item:hover .z-conv-message__preview-sender-name,
+body.blur-message .msg-item:hover .inline {
+    filter: blur(0px) !important;
+}
+
+/* ----------------------------------------------------
+   B. KHU VỰC HEADER VÀ BẢNG THÔNG TIN (Bên phải)
+------------------------------------------------------- */
+/* Thanh tiêu đề chat chính */
+body.blur-name .header-title:hover {
+    filter: blur(0px) !important;
+}
+
+/* Tên ở bảng thông tin bên phải (Rê chuột vào khu vực tên là hiện) */
+body.blur-name .header-info__name:hover .truncate {
+    filter: blur(0px) !important;
+}
+
+/* ----------------------------------------------------
+   C. MỞ MỜ KHI RÊ CHUỘT VÀO VÙNG CHỨA LỚN
+------------------------------------------------------- */
+/* Khu vực header chat (.threadChat) */
+body.blur-avatar .threadChat:hover .zavatar {
+    filter: blur(0px) !important;
+}
+body.blur-name .threadChat:hover .header-title {
+    filter: blur(0px) !important;
+}
+
+/* Khu vực bảng thông tin (.header-info) */
+body.blur-avatar .header-info:hover .zavatar {
+    filter: blur(0px) !important;
+}
+body.blur-name .header-info:hover .header-info__name .truncate {
+    filter: blur(0px) !important;
+}
+
+/* ----------------------------------------------------
+   D. RÊ CHUỘT TRỰC TIẾP VÀO TIN NHẮN CHÍNH
+------------------------------------------------------- */
+body.blur-name .truncate:hover {
+    filter: blur(0px) !important;
+}
+
+body.blur-avatar .zavatar:hover {
+    filter: blur(0px) !important;
+}
+
+body.blur-message .message-content-render:hover {
+    filter: blur(0px) !important;
+}

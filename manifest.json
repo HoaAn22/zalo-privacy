@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Zalo Privacy",
+  "version": "3.0",
+  "description": "Làm mờ Zalo với khả năng tùy chỉnh độc lập từng thành phần: Avatar, Tên, Tin nhắn.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://chat.zalo.me/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
